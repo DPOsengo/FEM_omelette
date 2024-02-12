@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-font-size: 16px;
+    --body-font-family: "Outfit";
+    --body-bg-color: hsl(30, 54%, 90%); /* background de la page */
+    --recipe-bg-color: hsl(0, 0%, 100%); /* background de la recette */
+    --recipe-title-color: hsl(24, 5%, 18%); /* titre de la recette */
+    --recipe-subtitle-color: hsl(14, 45%, 36%); /* titre des rubriques de la recette */
+    --recipe-p-color: hsl(30, 10%, 34%); /* texte de la recette */
+    --recipe-p-font-size: 16px;
+    --recipe-title-font-family: "Young Serif";
+    --recipe-preparation-background-color: hsl(330, 100%, 98%); /* background zone préparation */
+    --recipe-preparation-title-color: hsl(332, 51%, 32%); /* titre zone préparation */
+    --recipe-line-color: hsl(30, 18%, 87%); /* ligne de séparation */
+}
+
+body {
+    background-color: var(--body-bg-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    font-family: var(--recipe-title-font-family);
+}
+
+h1 {
+    color: var(--recipe-title-color);
+    font-size: 2.2rem;
+    line-height: 1.1em;
+}
+
+h2 {
+    color: var(--recipe-subtitle-color);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+h3 {
+    color: var(--recipe-preparation-title-color);
+    font-size: 1.2rem;
+}
+
+p,
+ul,
+ol {
+    line-height: 1.7em;
+}
+
+.recipe {
+    background-color: var(--recipe-bg-color);
+    color: var(--recipe-p-color);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    padding: 1.9rem;
+}
+
+img#photo {
+    width: 100%;
+}
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text p {
+    padding-top: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.recipe-preparation {
+    padding: 1rem 2rem;
+}
+
+.preparation-innercontainer {
+    background-color: var(--recipe-preparation-background-color);
+    border-radius: 8px;
+    padding: 1rem 1.8rem;
+}
+
+ul,
+ol {
+    font-family: var(--body-font-family);
+    padding: 0.4rem 1rem 0 1rem;
+}
+
+ul li {
+    padding: 0.3rem 1.2rem;
+    color: var(--recipe-preparation-title-color);
+}
+
+ol li,
+td.values {
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    color: var(--recipe-subtitle-color);
+    font-weight: 700;
+}
+
+li span {
+    color: var(--recipe-p-color);
+    font-weight: 400;
+}
+
+ul li > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+hr {
+    background-color: var(--recipe-line-color);
+    width: calc(100% - 4rem);
+    text-align: center;
+    border: none;
+    height: 1px;
+}
+
+.recipe-nutrition p {
+    padding: 1rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1.2rem 0;
+}
+
+tr.border_bottom {
+    border-bottom: 1px solid var(--recipe-line-color);
+}
+
+td.nutrients {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+td.values {
+    width: 50%;
+    padding-left: 0;
+}
+
+footer {
+    padding: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media query for screens larger than 768px */
+@media (min-width: 769px) {
+    /* Styles for screens larger than 768px */
+
+    .container {
+        padding-top: 8rem;
+    }
+
+    .recipe {
+        max-width: 46rem;
+        padding: 2.5rem;
+        border-radius: 16px;
+    }
+
+    img#photo {
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    section {
+        padding: 1.9rem 0;
+        width: 100%;
+    }
+
+    .recipe-preparation {
+        padding: 0;
+    }
+
+    p,
+    ul,
+    ol {
+        line-height: 1.4em;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    td {
+        padding: .9rem 0;
+    }
+}
